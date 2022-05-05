@@ -19,7 +19,9 @@
 <script type="text/javascript">
     RED.nodes.registerType("sage data", {
         category: "network",
-        color: "#c0edc0",
+        // color: "#c0edc0",
+        // TODO(sean) confirm color with neal
+        color: "#92baa7",
         defaults: {
             name: {
                 value: "",
@@ -46,7 +48,7 @@
         outputs: 1,
         icon: "white-globe.svg",
         label: function () {
-            return this.name || `sage data`
+            return this.name || "sage data"
         },
         oneditprepare: function() {
             $("#node-input-filter").typedInput({

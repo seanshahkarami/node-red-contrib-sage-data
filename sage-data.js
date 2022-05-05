@@ -32,7 +32,6 @@ module.exports = function (RED) {
                     return
                 }
 
-                // sort by timestamp
                 msgs.sort((a, b) => a.timestamp.localeCompare(b.timestamp))
 
                 const lastMsg = msgs[msgs.length - 1]
