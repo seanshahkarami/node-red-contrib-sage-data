@@ -1,0 +1,12 @@
+{
+  "name": "node-red-contrib-sage-data",
+  "description": "Node to watch Sage data API.",
+  "author": "Sean Shahkarami",
+  "version": "0.0.1",
+  "license": "MIT",
+  "node-red": {
+    "nodes": {
+      "sage-data": "sage-data.js"
+    }
+  }
+}

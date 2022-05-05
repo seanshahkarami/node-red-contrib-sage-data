@@ -1,0 +1,58 @@
+<script type="text/html" data-help-name="sage data">
+    <p>This node watches Sage Data API query results for new measurements.</p>
+    <p>Filters are specified using a JSON key-value pair.</p>
+    <code>{"name": "env.temperature", "vsn": "W023"}</code>
+</script>
+
+<script type="text/html" data-template-name="sage data">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-filter"><i class="fa fa-filter"></i> Filter</label>
+        <input type="text" id="node-input-filter">
+    </div>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType("sage data", {
+        category: "network",
+        color: "#c0edc0",
+        defaults: {
+            name: {
+                value: "",
+            },
+            filter: {
+                value: `{"name": "env.temperature"}`,
+                required: true,
+                validate: function(v) {
+                    try {
+                        const obj = JSON.parse(v)
+                        for (const k in obj) {
+                            if (typeof(obj[k]) != "string") {
+                                return false
+                            }
+                        }
+                        return true
+                    } catch {
+                        return false
+                    }
+                },
+            },
+        },
+        inputs: 0,
+        outputs: 1,
+        icon: "white-globe.svg",
+        label: function () {
+            return this.name || `sage data`
+        },
+        oneditprepare: function() {
+            $("#node-input-filter").typedInput({
+                type: "json",
+                types: ["json"]
+            })
+        }
+    })
+</script>
