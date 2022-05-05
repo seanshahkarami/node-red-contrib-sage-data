@@ -17,5 +17,5 @@ Here's a screenshot of a simple temperature monitoring example in action:
 Since this is in early development, you should install this package directly from the repo in your NodeRED environment:
 
 ```sh
-npm install --save https://github.com/seanshahkarami/node-red-contrib-sage-data
+npm install https://github.com/seanshahkarami/node-red-contrib-sage-data
 ```
