@@ -1,4 +1,4 @@
-# Sage Data Node
+# NodeRED Sage Data Node
 
 This NodeRED simplifies the integration of Sage data into NodeRED flows by watching and
 sending measurements from the Sage Data API.
