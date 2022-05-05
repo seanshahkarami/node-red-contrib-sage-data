@@ -27,6 +27,7 @@
             filter: {
                 value: `{"name": "env.temperature"}`,
                 required: true,
+                // validate that filter is JSON string -> string map
                 validate: function(v) {
                     try {
                         const obj = JSON.parse(v)
