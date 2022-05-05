@@ -25,7 +25,7 @@
                 value: "",
             },
             filter: {
-                value: `{"name": "env.temperature"}`,
+                value: `{"name": "env.temperature", "sensor": "bme680"}`,
                 required: true,
                 // validate that filter is JSON string -> string map
                 validate: function(v) {
