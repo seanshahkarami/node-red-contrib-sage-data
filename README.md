@@ -1,7 +1,6 @@
 # Sage Data for NodeRED
 
-This Sage data node simplifies the integration of Sage data into NodeRED flows by watching and
-sending measurements from the Sage Data API.
+This node simplifies getting Sage data into NodeRED so you can focus on the **_fun parts_** of your project!
 
 The node can be configured with a standard query filter. For more general information about
 data queries, see the [docs](https://docs.sagecontinuum.org/docs/tutorials/accessing-data).
